@@ -1,0 +1,30 @@
+<p>first works!</p>
+<!-- string interpolation -->
+<p>my {{'server'}} ID {{ serverId }} and server Name is {{ gerServerName() }}</p>
+<p>{{buttonValue}}</p>
+<hr/>
+<!-- Property Binding and event binding -->
+<button class="btn btn-primary" [disabled]="!buttonValue" (click)="onCreateServer()">Add Server</button>
+<p [innerText]="buttonValue"></p>
+ <p>{{serverCreationStatus}}</p><!--  event binding -->
+
+ <!-- passing and using data using event binding -->
+ <label for="server">Server Name</label>
+ <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+ {{server}}
+
+ <!-- Two way data binding -->
+ <label for="server">Server Name1</label>
+ <input type="text" class="form-control" [(ngModel)]="server1">
+ {{server1}}
+
+ <!-- Binding Assignments -->
+ <hr/>
+ <label for="">UserName</label>
+ <input type="text" class="form-control" [(ngModel)]="username">
+ {{username}}
+ <button class="btn btn-primary" [disabled]="username===''" (click)="username=''">Lonin</button>
+<app-direvtive-demo></app-direvtive-demo>
+<app-server *ngFor="let x of servers"></app-server>
+
+

@@ -1,0 +1,11 @@
+<h4>Direvtives demo</h4>
+<h4>ngIf</h4>
+<input type="text" class="form-control" [(ngModel)]="yourName">
+ <button class="btn btn-primary" [disabled]="yourName===''"  (click)="onClickFun()">Submit</button>
+ <p *ngIf="nameFlag;else noServer">Server name is {{yourName}}</p>
+ <!-- <p *ngIf="!nameFlag">Please enter your name..:-alternative for below code</p> -->
+ <ng-template #noServer>
+    <p>Please enter Server name..</p>
+ </ng-template>
+ <h4>ngStyle demo</h4>
+ 
