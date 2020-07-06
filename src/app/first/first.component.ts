@@ -39,6 +39,8 @@ export class FirstComponent implements OnInit {
   onUpdateServerName(event:Event){
 
     console.log(event)
+    console.log("new line");
+    
     // console.log(event); we can fetch value using target.value in console
     this.server=(<HTMLInputElement>event.target).value;
   }
