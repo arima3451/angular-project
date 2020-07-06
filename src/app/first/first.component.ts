@@ -37,6 +37,8 @@ export class FirstComponent implements OnInit {
     return this.serverCreationStatus='Server Created server name is '+this.server1;
   }
   onUpdateServerName(event:Event){
+
+    console.log(event)
     // console.log(event); we can fetch value using target.value in console
     this.server=(<HTMLInputElement>event.target).value;
   }

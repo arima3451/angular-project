@@ -10,8 +10,10 @@
 
  <!-- passing and using data using event binding -->
  <label for="server">Server Name</label>
- <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+ <input type="text" #sname class="form-control" (input)="onUpdateServerName($event)">
  {{server}}
+ {{sname.value}}
+ <!-- #sname it is template veriable -->
 
  <!-- Two way data binding -->
  <label for="server">Server Name1</label>
