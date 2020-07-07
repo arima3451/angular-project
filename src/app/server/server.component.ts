@@ -20,6 +20,8 @@ export class ServerComponent{
       this.serverStatus=Math.random()>0.5?'online':'offline';
      }
      getServerStatus(){
+       console.log("getServerStatus");
+       
         return this.serverStatus;
       }
       getColor(){
